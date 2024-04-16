@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" style = "scroll-behavior: smooth;">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0">
+	<title>Joseph Ma - Portfolio</title>
+	<link rel = "stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/4816327c7c.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="icon" href="images/jm.png">
+	<script src = "https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LB0RLKPKCN"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-LB0RLKPKCN');
+	</script>
+</head>
+
+<body>
+	<nav class = "navbar">
+		<div class = "max-width">
+			<div class = "theme_list">
+				<div class = "x">
+					<i class="fa-solid fa-bars active"></i>
+				</div>
+				<div class = "mobile_title">THEMES<br><br></div>
+				<ul>
+					<li class = "cat_mouse"><a href = "https://joseph-ma.com/">Cat & Mouse</a></li><br>
+					<li class = "gyro_arm"><a href = "https://joseph-ma.com/">Gyro Arm</a></li><br>
+					<li class = "wordle_solver"><a href = "https://joseph-ma.com/">Wordle Solver</a></li><br>
+					<li class = "stark_tower"><a href = "https://joseph-ma.com/">Stark Tower</a></li><br>
+					<li class = "security_alarm"><a href = "https://joseph-ma.com/">Security Alarm</a></li><br>
+					<li class = "weight_amplifier"><a href = "https://joseph-ma.com/">Weight Amplifier</a></li><br>
+					<li class = "cnc_hammer"><a href = "https://joseph-ma.com/">CNC Hammer</a></li><br>
+					<!-- <li class = "grade_calculator"><a href = "https://joseph-ma.com/">Grade Calculator</a></li> -->
+				</ul>
+			</div>
+			<div class = "memory_list">
+				<div class = "x2">
+					<i class="fa-solid fa-bars active"></i>
+				</div>
+				<div class = "mobile_title">MEMORIES<br><br></div>
+				<ul>
+					<!-- <li class = "summer22"><a href = "https://joseph-ma.com/">Summer 22'</a></li><br> -->
+					<li class = "fall22"><a href = "https://joseph-ma.com/">Fall 22'</a></li><br>
+					<li class = "spring23"><a href = "https://joseph-ma.com/">Spring 23'</a></li><br>
+					<li class = "fall23"><a href = "https://joseph-ma.com/">Fall 23'</a></li>
+				</ul>
+			</div>
+			<div class = "logo"><a href="#">Joseph's <span>Portfolio</a></div>
+
+			<ul class = "menu">
+				<li class = "original_button"><a href="https://joseph-ma.com/">Home</a></li>
+				<li class = "original_button"><a href="#about">About</a></li>
+				<li class = "original_button"><a href="#projects">Projects</a></li>
+				<li><a class = "themes">Themes</a>
+					<div class = "theme">
+						<ul>
+							<li class = "cat_mouse"><a href = "https://joseph-ma.com/">Cat & Mouse</a></li><br>
+							<li class = "gyro_arm"><a href = "https://joseph-ma.com/">Gyro Arm</a></li><br>
+							<li class = "wordle_solver"><a href = "https://joseph-ma.com/">Wordle Solver</a></li><br>
+							<li class = "stark_tower"><a href = "https://joseph-ma.com/">Stark Tower</a></li><br>
+							<li class = "security_alarm"><a href = "https://joseph-ma.com/">Security Alarm</a></li><br>
+							<li class = "weight_amplifier"><a href = "https://joseph-ma.com/">Weight Amplifier</a></li><br>
+							<li class = "cnc_hammer"><a href = "https://joseph-ma.com/">CNC Hammer</a></li>
+							<!-- <li class = "grade_calculator"><a href = "https://joseph-ma.com/">Grade Calculator</a></li> -->
+						</ul>
+					</div>
+					<script>
+						//THEME SELECTOR
+						const my_themes = ["security_alarm", "wordle_solver", "weight_amplifier", "cat_mouse", 
+						"stark_tower", "cnc_hammer", "gyro_arm"] //, "grade_calculator"]
+						const theme_list = new Array(my_themes.length)
+
+						for(let i = 0; i < my_themes.length; i++) {
+							theme_list[i] = document.querySelectorAll("." + my_themes[i]);
+							theme_list[i].forEach(element => {
+							  element.addEventListener('click', () => {
+							    localStorage.setItem("my__background", parseInt(i + 1));
+							    localStorage.setItem("is__theme", 1);
+							  });
+							});
+						}
+					</script>
+				</li>
+
+				<li><a class = "mems">Memories</a>
+					<div class = "memories">
+						<ul>
+							<!-- <li class = "summer22"><a href = "https://joseph-ma.com/">Summer 22'</a></li><br> -->
+							<li class = "fall22"><a href = "https://joseph-ma.com/">Fall 22'</a></li><br>
+							<li class = "spring23"><a href = "https://joseph-ma.com/">Spring 23'</a></li><br>
+							<li class = "fall23"><a href = "https://joseph-ma.com/">Fall 23'</a></li>
+						</ul>
+						<script>
+							//MEMORY SELECTOR
+							const my_memories = ["fall22", "spring23", "fall23"]
+							const memory_list = new Array(my_memories.length)
+
+							for(let i = 0; i < my_memories.length; i++) {
+								memory_list[i] = document.querySelectorAll("." + my_memories[i]);
+								memory_list[i].forEach(element => {
+								  element.addEventListener('click', () => {
+								    localStorage.setItem("my__background", my_memories[i]);
+								    localStorage.setItem("is__theme", 0);
+								  });
+								});
+							}
+						</script>
+					</div>
+				</li>
+			</ul>
+			<div class ="menu-btn">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+			<script>
+				//THEME/MEMORIES SELECTOR - MOBILE DEVICE
+				const mediaQuery = window.matchMedia("(max-width: 947px)");
+
+				// function to apply styles or properties based on the media query
+				const theme_button = document.querySelector(".themes");
+				const theme_element = document.querySelector(".theme_list");
+				const memory_button = document.querySelector(".mems");
+				const memory_element = document.querySelector(".memory_list");
+
+				function handleMediaQueryChange(mediaQuery) {
+				  if (mediaQuery.matches) {
+				    // add the event listener using a named function
+				    theme_button.addEventListener('click', handleClick);
+				    memory_button.addEventListener('click', handleClick2);
+				  } else {
+				    // remove the event listener using the same named function
+				    theme_button.removeEventListener('click', handleClick);
+				    memory_button.removeEventListener('click', handleClick2);
+				  }
+				}
+
+				// named function to handle the click event
+				function handleClick(event) {
+				  event.preventDefault();
+				  theme_element.classList.toggle("active");
+				}
+
+				function handleClick2(event) {
+				  event.preventDefault();
+				  memory_element.classList.toggle("active");
+				}
+
+				// add a listener to the media query to detect changes in screen width
+				mediaQuery.addListener(handleMediaQueryChange);
+
+				// call the function initially to apply styles or properties based on the current screen width
+				handleMediaQueryChange(mediaQuery);
+
+				//X BUTTON FORMATTER
+				const x_button = document.querySelector(".x");
+				const x2_button = document.querySelector(".x2");
+				x_button.addEventListener('click', closeTheme);
+				x2_button.addEventListener('click', closeMemory);
+
+				const theme_element2 = document.querySelector(".theme_list");
+				const memory_element2 = document.querySelector(".memory_list");
+
+				function closeTheme(event) {
+				  theme_element2.classList.remove('active');
+				  theme_element2.classList.add('inactive');
+				}
+
+				function closeMemory(event) {
+				  memory_element2.classList.remove('active');
+				  memory_element2.classList.add('inactive');
+				}
+
+				const element1 = document.querySelector('.menu-btn');
+				const rect = element1.getBoundingClientRect();
+
+				const element2 = document.querySelector('.x');
+				const element3 = document.querySelector('.x2');
+				element2.style.left = `${rect.left}px`;
+				element2.style.top = `${rect.top}px`;
+				element3.style.left = `${rect.left}px`;
+				element3.style.top = `${rect.top}px`;
+
+				window.addEventListener('resize', () => {
+				  const element1 = document.querySelector('.menu-btn');
+				  const rect = element1.getBoundingClientRect();
+
+				  const element2 = document.querySelector('.x');
+				  const element3 = document.querySelector('.x2');
+				  element2.style.left = `${rect.left}px`;
+				  element2.style.top = `${rect.top}px`;
+				  element3.style.left = `${rect.left}px`;
+				  element3.style.top = `${rect.top}px`;
+				});
+			</script>
+		</div>
+	</nav>
+	<!--HOME SECTION-->
+	<div id = "particles-js"></div>
+	<section class="home" id = "home">
+		<div class="max-width">
+			<div class="home-content">
+				<div class = "text-1">Hello World. My name is </div>
+				<div class = "text-2">Joseph Ma</div>
+				<div class = "text-3">And I'm <span class = "typing"></span></div>
+				<a href="joseph_ma_spring24_resume.pdf" download= "" target = "_blank">Résumé</a>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<!-- ABOUT SECTION-->
+	<section class="about" id = "about">
+		<div class="max-width">
+			<h2 class = "title">About me</h2>
+			<div class= "about-content">
+				<div class = "column left">
+					<img src = "images/portrait.png" alt = "">
+				</div>
+				<div class = "column right">
+					<div class = "text">Hello there. I'm Joseph!</div>
+					<p>I am currently pursuing my master's degree in Electrical and Computer Engineering at <b><a href = "https://engineering.purdue.edu/ECE" target = "_blank">Purdue University ECE</a></b>. Throughout my studies, I have found enjoyment in the perfect blend of electrical engineering and computer science that this program offers. Inspirations from content creators like <b><a href = "https://www.youtube.com/c/Electroboom" target = "blank">ElectroBOOM</a></b> and <b><a href = "https://www.youtube.com/watch?v=UwsrzCVZAb8&ab_channel=YouTubeOriginals" target = "_blank">The Age of A.I.</a></b> have further fueled my passion for this field. My interests span across a wide range of areas, including data structures and algorithms, full stack web development, embedded systems, digital design, machine learning, artificial intelligence, and robotics. If you're curious to explore my past projects, feel free to visit the Projects section of my portfolio, where you'll find detailed information and demonstrations of <b><a href="#projects">12 completed projects</a></b>, with more exciting ones in progress. <br><br>
+					I'm currently serving as a <b>Graduate Teaching Assistant</b> for <b>ECE 362: Microprocessor Systems and Interfacing</b> where we work with <b>embedded systems</b>. Aside from this, I'm investigating applications in <b>Deep Reinforcement Learning</b> which stems from my two most recent projects: <b>Neural Network Architecture from Scratch</b> and <b>Cat and Mouse 2: Reinforcement Learning</b>. 
+
+					<br><br>Beyond academics, I find joy in activities such as biking, swimming (I've also previously worked as a lifeguard), cooking, watching movies, playing Valorant/Overwatch, and expressing my creativity through digital art. To explore my artistic endeavors further, feel free to visit the <b>Themes</b> and <b>Memories</b> section, where you can discover more and even <b>set a new homepage background</b>.</p>
+					<br>
+					<p>Want to collab on a project or have any questions? Feel free to contact me.</p>
+					<div class = "icon-box">
+						<a href = "https://www.linkedin.com/in/josephm130/" target = "_blank">
+							<div class = "icons">
+								<i class="fa-brands fa-linkedin"> </i>
+							</div>
+						</a>
+						<a href = "https://github.com/ma562" target = "_blank">
+							<div class = "icons">
+								</i><i class="fa-brands fa-github"></i>
+							</div>
+						</a>
+						<a href = "mailto:ma562@purdue.edu">
+							<div class = "icons">
+								<i class="fa-solid fa-envelope"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- courses SECTION-->
+	<section class="course" id = "course">
+		<div class="max-width">
+			<div class= "course-content">
+				<div class = "column left">
+					<div class = "text">Coursework</div>
+					<div>
+						<ul>
+							<b>Spring 2021</b>
+							<li>ECE 20001 - Electrical Engineering Fundamentals I</li>
+							<li>ECE 20007 - Electrical Engineering Fundamentals I Lab</li>
+							<li>MA 266 - Ordinary Differential Equations</li>
+							<li>ECE 264 - Advanced C Programming</li>
+							<li>ENGR 131 - Transforming Ideas to Innovation I</li><br>
+
+							<b>Fall 2021</b>
+							<li>ECE 20002 - Electrical Engineering Fundamentals II</li>
+							<li>ECE 20875 - Python For Data Science</li>
+							<li>ECE 270 - Introduction To Digital System Design</li>
+							<li>MA 265 - Linear Algebra</li>
+							<li>ECE 368 - Data Structures</li>
+							<li>ENGR 132 - Transforming Ideas to Innovation II</li><br>
+
+							<b>Spring 2022</b>
+							<li>ECE 362 - Microprocessor Systems and Interfacing</li>
+							<li>ECE 301 - Signals and Systems</li>
+							<li>ECE 302 - Probabilistic Methods in Electrical and Computer Engineering</li>
+							<li>VIP 37920 - Junior Part in VIP (Robotics Exploration)</li><br>
+
+							<b>Fall 2022</b>
+							<li>ECE 570 - Artificial Intelligence</li>
+							<li>ECE 369 - Discrete Mathematics for Computer Engineering</li>
+							<li>ECE 39595 - Object Oriented Programming w/ C++</li>
+						</ul>
+					</div>
+					<br>
+					<!-- <div class = "text">Current</div> -->
+					<div>
+						<ul>
+							<b>Spring 2023</b>
+							<li>ECE 404 - Introduction to Computer Security</li>
+							<li>ECE 461 - Software Engineering</li>
+							<li>ECE 469 - Operating Systems Engineering</li>
+							<li>ECE 49595 - Open Source Software Senior Design</li>
+						</ul>
+					</div>
+				</div>
+				<div class = "column right">
+					<div class = "text">Skills</div>
+					<div>
+						<ul>
+							<li>HTML <img src = "images/html-5.png" alt = ""></li>
+							<li>CSS <img src = "images/css-3.png" alt = ""></li>
+							<li>JavaScript <img src = "images/js.png" alt = ""></li>
+							<li>React.js  <img src = "images/physics.png" alt = ""></li>
+							<li>Git  <img src = "images/git.png" alt = ""></li>
+							<li><img src = "images/C.png" alt = ""></li>
+							<li>GDB  <img src = "images/gdb.png" alt = ""></li>
+							<li>Java  <img src = "images/java.png" alt = ""></li>
+							<li>MATLAB <img src = "images/matlab.png" alt = ""></li>
+							<li>Python  <img src = "images/python.png" alt = ""></li>
+							<li>FPGA/Verilog  <img src = "images/verilog.png" alt = ""></li>
+							<li>ARM Assembly <img src = "images/arm.png" alt = ""></li>
+							<li>EAGLE  <img src = "images/eagle.jpeg" alt = ""></li>
+							<li>Fusion 360  <img src = "images/fusion.jpeg" alt = ""></li>
+							<li><img src = "images/solidworks.svg" alt = ""></li>
+							<li>CATIA V5  <img src = "images/catia.png" alt = ""></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- projects -->
+	<section class = "projects" id = "projects">
+		<div class = "max-width">
+			<div class = "text">--Projects--</div><br>
+			<div class = "carousel owl-carousel">
+				<a href = "https://ma562.github.io/joseph_ma-neural_networks/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Neural Networks from SCRATCH</b></div>
+							<b>--Individual--</b>
+							<img src = "images/neural.png" alt = "">
+							<br>
+							<p>Designed and built a neural network to implement deep learning from scratch (just with NumPy and Python) able to categorize data sets such as MNIST with close to 90% accuracy and above. Step by step hand calculations included!<br><br><br></p>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/dijkstra-vs-q-learning-demo/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Cat & Mouse 2: <br> Reinforcement Learning</b></div>
+							<b>--Individual--</b>
+							<img src = "images/rl.png" alt = "">
+							<br>
+							<p>Developed a multi-agent training environment w/ Q-learning, an off policy RL algorithm. This is a sequel to Cat and Mouse where this time, the cat and mouse are able to learn to play against each other!<br><br><br></p>
+						</div>
+					</div>
+				</a>
+				<a href = "#projects">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Differential Cryptoanalysis</b></div>
+							<b>--Individual--</b>
+							<img src = "images/diffrential_crypto.png" alt = "">
+							<br>
+							<p>Coming soon.<br><br><br></p>
+						</div>
+					</div>
+				</a>
+				<a href = "#projects">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Boiler Ticket Chain</b></div>
+							<b>--Group--</b>
+							<img src = "images/meta_mask.png" alt = "">
+							<br>
+							<p>Coming soon.<br><br><br></p>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma-goodnight_light/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Goodnight Light</b></div>
+							<b>--Individual--</b>
+							<img src = "images/gdnight_light.PNG" alt = "">
+							<br>
+							<p>Created a PCB circuit schematic/board layout on Autodesk EAGLE and soldered on components. Final product was a device that turned on/off an LED based on how much light was detected in the environment.</p>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/-joseph_ma-wordle_solver/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Wordle Solver</b></div>
+							<b>--Individual--</b>
+							<img src = "images/wordle.png" alt = "">
+							<br>
+							<p>Wrote a program with Python and Pandas to solve Wordle puzzles for words of any length efficiently while evaluating all conditions provided by the game.</p>
+							<br><br>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma-cat_mouse/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Cat & Mouse</b></div>
+							<b>--Group--</b>
+							<img src = "images/cat_mouse.png" alt = "">
+							<br>
+							<p>A game boy programmed in C using the STM32 ARM microcontroller. Utilized SPI, ADC, DAC and GPIO for hardware operation. Cat was programmed to autonomously chase the mouse. Design was finalized with a PCB.</p>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma_k_means/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Raw K-means Clustering</b></div>
+							<b>--Individual--</b>
+							<img src = "images/k_means.png" alt = "">
+							<br>
+							<p>Wrote an algorithm to illustrate unsupervised machine learning on python in both 1 and 2 dimensions without the help of any machine learning libraries.</p>
+							<br><br>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma_gyro_controlled_arm/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Gyroscope Controlled Arm</b></div>
+							<b>--Individual--</b>
+							<img src = "images/arm2.jpg" alt = "">
+							<br>
+							<p>Built a robotic arm out of popsicle sticks/MG966R servo motors and used Arduino software to calibrate them to GY-521 gyroscope accelerometers which allowed for the robotic arm to mimic the movements of a human arm.</p>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma-stark_tower/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Stark Tower</b></div>
+							<b>--Individual--</b>
+							<img src = "images/stark8.PNG" alt = "">
+							<br>
+							<p>A detailed CAD model of Stark Tower created and designed on CATIA V5. 3D printed with PLA afterwards.</p>
+							<br><br><br><br>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma-audio_equalizer/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Audio Equalizer</b></div>
+							<b>--Individual--</b>
+							<img src = "images/audio_eq1.png" alt = "">
+							<br>
+							<p>Designed and constructed an audio equalizer comprising of filters and operational amplifiers to isolate and magnify signals at bass, mid and treble frequencies.</p>
+							<br><br>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma_mutlivariate_grade_calculator/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Multivariate Grade Calculator</b></div>
+							<b>--Individual--</b>
+							<img src = "images/grade_calc.png" alt = "">
+							<br>
+							<p>Not an ordinary grade calculator. One of my first sites created. Written in pure HTML, CSS, JS with no frameworks. Responsive design still in development.</p>
+							<br><br>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma_weight_amplifier_comparator/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Weight Amplifier & Comparator</b></div>
+							<b>--Group--</b>
+							<img src = "images/mass_amplifier.PNG" alt = "">
+							<br>
+							<p>Codesigned a filtration system to assist Kimberly-Clark in differentiating paper towels from other waste with accurate results and a high success rate. Final product was created with Autodesk Fusion 360.</p>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma-cnc_machined_hammer/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>CNC Machined Hammer</b></div>
+							<b>--Individual--</b>
+							<img src = "images/cnc.png" alt = "">
+							<br>
+							<p>Programmed and generated G-code on Vericut software for CNC simulation. Final product was machined on Hurco CNC machine. </p>
+							<br><br><br>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma-enzyme_data_analysis/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Enzyme Data Analysis</b></div>
+							<b>--Group--</b>
+							<img src = "images/michaelis_img.png" alt = "">
+							<br>
+							<p>Codesigned and implemented an algorithm to analyze data to model the Michaelis Menten curve yielding surprisingly accurate results. Data was extracted from Excel and algorithm was written and implemented on MATLAB.</p>
+						</div>
+					</div>
+				</a>
+				<a href = "https://ma562.github.io/joseph_ma-security_alarm_sensor-/">
+					<div class = "card">
+						<div class = "box">
+							<div class = "text"><b>Security Alarm Sensor</b></div>
+							<b>--Group--</b>
+							<img src = "images/jw security.jpg" alt = "">
+							<br>
+							<p>Codesigned and programmed a security alarm sensor with a PLC. Utilized diffused photoelectric sensor and inductive sensor for detection. Flowchart logic was implemented on nanoNavigator and design was prototyped in SolidWorks.</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			</section>
+		</div>
+	</section>
+
+	<div class = "info" id = "info">
+		<div class = "text">Copyright © 2022 - 2024 Joseph Ma</div>
+	</div>
+
+	<script src="javascript/particles.js"></script>
+	<script src="javascript/app.js"></script>
+	<script src ="javascript/script.js"></script>
+	<script src = "javascript/background_picker.js"></script>
+</body>
+
+</html>

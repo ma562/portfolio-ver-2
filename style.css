@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+.stop-scrolling {
+	height: 100%;
+	overflow: hidden;
+}
+
+.max-width{
+	max-width: 1300px;
+	padding: 0 80px;
+	margin: auto;
+}
+
+#particles-js{
+	top: 0;
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background-color: transparent;
+	display: block;
+	height:100vs;
+}
+
+/*navbar*/
+.navbar {
+	z-index: 2;
+	position: fixed;
+	width: 100%;
+	padding: 30px 0;
+	font-family: 'Ubuntu', 'sans-serif;';
+	transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+	padding: 15px 0;
+	background: #00274c;
+}
+
+.navbar .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar .logo a{
+	color: #fff;
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.navbar .logo a span{
+	color: #ffcb05;
+	transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+	color: #fff;
+}
+
+.navbar .menu li{
+	list-style: none;
+	display: inline-block;
+}
+
+.navbar .menu li a{
+	color: #fff;
+
+	/*lets fix this*/
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px;
+	transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover{
+	color: #ffcb05;
+}
+
+.navbar.sticky .menu li a:hover {
+	color: #fff;
+}
+
+/*menu button*/
+.menu-btn{
+	color: #fff;
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+
+/*home*/
+.home{
+	background-color: #000e0a;
+	transition: 1s;
+	display: flex;
+	height: 100vh;
+	color: #fff;
+	min-height: 500px;
+	font-family: 'Ubuntu', 'sans-serif;';
+}
+
+.home .max-width{
+	z-index: 1;
+	margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+	font-size: 34px;
+	text-shadow: 0 0 10px #000, 
+        			 0 0 20px #000,
+        			 0 0 30px #000,
+        			 0 0 40px #000
+}
+
+.home .home-content .text-2 {
+	font-size: 75px;
+	font-weight: 600;
+	margin-left: -3px;
+	color: #ffcb05;
+	text-shadow: 0 0 10px #000, 
+        			 0 0 20px #000,
+        			 0 0 30px #000,
+        			 0 0 40px #000
+}
+
+.home .home-content .text-3 {
+	font-size: 40px;
+	margin: 5px 0;
+	text-shadow:  0 0 10px #000, 
+        			 0 0 20px #000,
+        			 0 0 30px #000,
+        			 0 0 40px #000;
+}
+
+.home .home-content .text-3 span {
+	color: #ffcb05;
+	font-weight: 500;
+	text-shadow: 0 0 10px #000, 
+        			 0 0 20px #000,
+        			 0 0 30px #000,
+        			 0 0 40px #000
+}
+
+.home .home-content a{
+	display: inline-block;
+	background: #ffcb05;
+	color: black;
+	font-size: 25px;
+	padding: 12px 36px;
+	margin-top: 20px;
+	border-radius: 6px;
+	border: 2px solid black;
+	border-color: #ffcb05;
+	transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+	color: #ffcb05;
+	background: none;
+}
+
+/*about*/
+section{
+	padding:  95px 0;
+}
+.about, .projects{
+	font-family: 'Poppins', sans-serif;
+	min-height: 500px;
+	color: #00274c;
+}
+.about .title{
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+	font-family: 'Ubuntu', sans-serif;
+}
+.about .about-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+}
+.about .about-content .left{
+	width: 40%;
+}
+
+.about .about-content .left img{
+	border-radius: 200px;
+	height: 295px;
+	width: 295px;
+	object-fit: cover;
+}
+
+.about .about-content .right{
+	width: 60%;
+}
+.about .about-content .right .text{
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.about .about-content .right p{
+	text-align: justify;
+}
+
+.icon-box{
+	display: flex;
+	flex-direction: row;
+}
+
+.icons {
+	font-size: 40px;
+	width: 60px;
+	text-align: center;
+	text-vertical-align: middle;
+	height: 60px;
+	background-color: white;
+	margin: 20px 0px;
+	transition: all 0.3s ease;
+}
+
+.icons:hover{
+	cursor: pointer;
+	color: #ffcb05
+}
+
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
+ }
+/*course work and skills*/
+
+.course {
+	background: #e3e3e3;
+	font-family: 'Poppins', sans-serif;
+	min-height: 500px;
+	color: #00274c;
+}
+
+.course .course-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+}
+
+.course .course-content .left {
+	width: 50%;
+}
+
+.course .course-content .left .text{
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.course .course-content .right{
+	width: 30%;
+	font-size: 22px;
+
+}
+
+.course .course-content .right .text{
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.course .course-content .right img{
+	height: 25px;
+}
+
+/*Themes*/
+.mems, .themes {
+	cursor: pointer;
+}
+
+.theme {
+	line-height: 25px;
+	display: none;
+} 
+
+.navbar .menu .theme li a{
+	display: block;
+	font-size: 14px;
+	font-color: black;
+}
+
+
+.navbar .max-width ul li:hover .theme {
+	display: block;
+	border-radius: 5px;
+	position: absolute;
+	/*opacity: 95%;*/
+	background: #00274C;
+	margin-top: 0px;
+	margin-left: 15px;
+	z-index: 200;
+}
+
+.navbar .max-width ul li:hover .theme ul{
+	display: block;
+	margin: 10px;
+}
+
+.navbar ul li:hover .theme ul li{
+	width: 150px;
+	padding: 3px 3px;
+	border-bottom: thick double white;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
+.navbar ul li:hover .theme ul li:last-child{
+	border-bottom: none;
+}
+
+.memory_list, .theme_list {
+	display: none;
+}
+
+.hidden {
+	display: none;
+}
+
+/*Memories*/
+.memories {
+	line-height: 25px;
+	display: none;
+}
+
+.navbar .menu .memories li a{
+	display: block;
+	font-size: 14px;
+	font-color: black;
+}
+
+
+.navbar .max-width ul li:hover .memories {
+	display: block;
+	border-radius: 5px;
+	position: absolute;
+	/*opacity: 95%;*/
+	background: #00274C;
+	margin-top: 0px;
+	margin-left: 15px;
+	z-index: 200;
+}
+
+.navbar .max-width ul li:hover .memories ul{
+	display: block;
+	margin: 10px;
+}
+
+.navbar ul li:hover .memories ul li{
+	width: 150px;
+	padding: 3px 3px;
+	border-bottom: thick double white;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
+.navbar ul li:hover .memories ul li:last-child{
+	border-bottom: none;
+}
+
+/*projects*/
+.projects .text{
+	font-family: 'Orbitron', sans-serif;
+	font-size: 40px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	text-align: center;
+
+}
+
+.projects {
+	color: #aeb78d;
+	background: url("images/glow_stark5.png") center;
+	background-size: cover;
+}
+
+.projects .carousel .card{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	color: #00274c;
+	background: #e3e3e3;
+	opacity: 0.83;
+	border-radius: 6px;
+	padding: 20px 35px;
+	text-align: center;
+	overflow: hidden;
+	transistion: all 0.3s ease;
+	text-align: justify;
+	height: 600px;			/*changed*/
+}
+
+.projects .carousel .card:hover{
+	cursor: pointer;
+	background: #ffcb05;
+	opacity: 1.0;
+	color: #111;
+}
+
+.projects .carousel .card .box{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover .box{
+	transform: scale(1.05);
+}
+
+.projects .carousel .card .text{
+	font-size: 18px;
+	font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+	/*margin: 10px 0 7px 0;*/
+}
+
+.projects .carousel .card img{
+	height: 300px;
+	width: 300px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 5px solid #111;
+	transition: all 0.3s ease;
+}
+
+.projects .carousel .card:hover img{
+	border-color: #000;
+}
+
+.owl-dots{
+	text-align: center;
+	margin-top: 20px;
+}
+
+.owl-dot{
+	height: 13px;
+	width: 13px;
+	margin: 0 5px;
+	outline: none!important;
+	border-radius: 50%;
+	border: 2px solid white!important;
+	transition: all 0.3s ease;
+}
+
+.owl-dot.active,
+.owl-dot:hover{
+	background: white!important;
+}
+
+/*contact */
+.info {
+	background: #000000;
+	min-height: 25px;
+}
+
+.info .text{
+	font-family: 'Poppins', sans-serif;
+	color: #aeb78d;
+	font-size: 15px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+/*mobile version*/
+@media (max-width: 1300px) {
+	.home {
+
+		/*CHANGE HERE*/
+		background-position: center bottom;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+
+	.home .max-width{
+		margin-left: 0px;
+	}
+}
+@media (max-width: 1104px) {
+	.projects .carousel .card {
+		font-size: 13px;
+	}
+
+
+	.about .about-content .left img{
+		height: 325px;
+		width: 325px;
+	}
+}
+
+@media (max-width: 991px) {
+	.max-width{
+		padding: 0 50px;
+	}
+
+}
+
+@media (max-width: 947px){
+	/*hamburger button appears so undo the hover effects in themes/memories*/
+	.theme, .memories {
+		all: unset;
+		display: none;
+	} 
+
+	.navbar .menu .theme li a, .navbar .menu .memories li a{
+		all: unset;
+		display: none;
+	}
+
+	.navbar .max-width ul li:hover .theme, .navbar .max-width ul li:hover .memories {
+		all: unset;
+		display: none;
+	}
+
+	.navbar .max-width ul li:hover .theme ul, .navbar .max-width ul li:hover .memories ul{
+		all: unset;
+		display: none;
+	}
+
+	.navbar ul li:hover .theme ul li, .navbar ul li:hover .memories ul li{
+		all: unset;
+		display: none;
+	}
+
+	.menu-btn{
+		display: block;
+		z-index: 999;
+	}
+	.menu-btn i.active:before{
+		content: "\f00d";
+	}
+	.navbar .menu {
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		background: #00274c;
+		text-align: center;
+		padding-top: 80px;
+		transition: all 0.3s ease;
+	}
+
+	.navbar .menu.active{
+		left: 0;
+	}
+
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 30px 0;
+		font-size: 30px;
+		font-weight: 500;
+	}
+
+	.mobile_title {
+		font-size: 35px;
+	}
+
+	.x, .x2 {
+/*		display: block;*/
+		font-size: 23px;
+		position: absolute;
+		cursor: pointer;
+	}
+
+	.x i.active:before, .x2 i.active:before {
+		content: "\f00d";
+	}
+
+	.navbar .theme_list.active {
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		text-align: center;
+		padding-top: 80px;
+		height: 100vh;
+		width: 100%;
+		font-size: 20px;
+		font-weight: 500;
+		background-color: white;
+		color: #00274C;
+	}
+
+	.navbar .memory_list.active {
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		text-align: center;
+		padding-top: 80px;
+		height: 100vh;
+		width: 100%;
+		font-size: 27px;
+		font-weight: 500;
+		background-color: white;
+		color: #00274C;
+	}
+
+	.memory_list.active, .theme_list.active {
+		display: block;
+		left: 0;
+	}
+
+	.home .home-content .text-1 {
+		font-size: 32px;
+	}
+
+	.home .home-content .text-2 {
+		font-size: 70px;
+	}
+	.home .home-content .text-3 {
+		font-size: 35px;
+	}
+
+	.home .home-content a{
+		font-size: 23px;
+		padding: 10px 30px;
+	}
+	.max-width{
+		max-width: 800px;
+	}
+	.about .about-content .column{
+		width: 100%;
+	}
+	.about .about-content .left{
+		display: flex;
+		justify-content: center;
+		margin: 0 auto 60px;
+	}
+	.about .about-content .right{
+		flex: 100%;
+	}
+
+	.course .course-content .column{
+		width: 100%;
+	}
+
+	.course .course-content .left{
+		/*display: flex;*/
+		justify-content: center;
+		margin: 0 auto 100px;
+	}
+	.course .course-content .right{
+		flex: 100%;
+		padding-left: 20px;
+
+	}
+}
+
+@media (max-width: 690px) {
+	.max-width{
+		padding: 0 23px;
+	}
+	.home .home-content .text-1 {
+		font-size: 27px;
+	}
+	.home .home-content .text-2 {
+		font-size: 60px;
+	}
+
+	.home .home-content .text-3 {
+		font-size: 32px;
+	}
+	.home .home-content a{
+		font-size: 20px;
+		padding: 9px 25px;
+	}
+}
+
+@media (max-width: 500px) {
+	.home .home-content .text-1 {
+		font-size: 23px;
+	}
+	.home .home-content .text-2 {
+		font-size: 50px;
+	}
+
+	.home .home-content .text-3 {
+		font-size: 27px;
+	}
+}

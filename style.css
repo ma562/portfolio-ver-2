@@ -285,7 +285,7 @@ a, a:visited {
 }
 
 /*Themes*/
-.mems, .themes {
+.mems, .themes, .proj {
 	cursor: pointer;
 }
 
@@ -294,7 +294,18 @@ a, a:visited {
 	display: none;
 } 
 
+.projectz {
+	line-height: 25px;
+	display: none;
+} 
+
 .navbar .menu .theme li a{
+	display: block;
+	font-size: 14px;
+	font-color: black;
+}
+
+.navbar .menu .projectz li a{
 	display: block;
 	font-size: 14px;
 	font-color: black;
@@ -312,7 +323,23 @@ a, a:visited {
 	z-index: 200;
 }
 
+.navbar .max-width ul li:hover .projectz {
+	display: block;
+	border-radius: 5px;
+	position: absolute;
+	/*opacity: 95%;*/
+	background: #00274C;
+	margin-top: 0px;
+	margin-left: 15px;
+	z-index: 200;
+}
+
 .navbar .max-width ul li:hover .theme ul{
+	display: block;
+	margin: 10px;
+}
+
+.navbar .max-width ul li:hover .projectz ul{
 	display: block;
 	margin: 10px;
 }
@@ -326,11 +353,26 @@ a, a:visited {
 	text-align: left;
 }
 
+
+.navbar ul li:hover .projectz ul li{
+	width: 150px;
+	padding: 3px 3px;
+	border-bottom: thick double white;
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+}
+
 .navbar ul li:hover .theme ul li:last-child{
 	border-bottom: none;
 }
 
-.memory_list, .theme_list {
+.navbar ul li:hover .projectz ul li:last-child{
+	border-bottom: none;
+}
+
+
+.proj_list, .memory_list, .theme_list {
 	display: none;
 }
 
@@ -519,27 +561,27 @@ a, a:visited {
 
 @media (max-width: 947px){
 	/*hamburger button appears so undo the hover effects in themes/memories*/
-	.theme, .memories {
+	.theme, .memories, .projectz {
 		all: unset;
 		display: none;
 	} 
 
-	.navbar .menu .theme li a, .navbar .menu .memories li a{
+	.navbar .menu .theme li a, .navbar .menu .memories li a, .navbar .menu .projectz li a{
 		all: unset;
 		display: none;
 	}
 
-	.navbar .max-width ul li:hover .theme, .navbar .max-width ul li:hover .memories {
+	.navbar .max-width ul li:hover .theme, .navbar .max-width ul li:hover .memories, ..navbar .max-width ul li:hover .projectz {
 		all: unset;
 		display: none;
 	}
 
-	.navbar .max-width ul li:hover .theme ul, .navbar .max-width ul li:hover .memories ul{
+	.navbar .max-width ul li:hover .theme ul, .navbar .max-width ul li:hover .memories ul, .navbar .max-width ul li:hover .projectz ul{
 		all: unset;
 		display: none;
 	}
 
-	.navbar ul li:hover .theme ul li, .navbar ul li:hover .memories ul li{
+	.navbar ul li:hover .theme ul li, .navbar ul li:hover .memories ul li, .navbar ul li:hover .projectz ul li{
 		all: unset;
 		display: none;
 	}
@@ -581,18 +623,36 @@ a, a:visited {
 		font-size: 35px;
 	}
 
-	.x, .x2 {
+	.proj_title {
+		font-size: 35px;
+	}
+
+	.x, .x2, .x3 {
 /*		display: block;*/
 		font-size: 23px;
 		position: absolute;
 		cursor: pointer;
 	}
 
-	.x i.active:before, .x2 i.active:before {
+	.x i.active:before, .x2 i.active:before, .x3 i.active:before {
 		content: "\f00d";
 	}
 
 	.navbar .theme_list.active {
+		position: fixed;
+		z-index: 1000;
+		top: 0;
+		text-align: center;
+		padding-top: 80px;
+		height: 100vh;
+		width: 100%;
+		font-size: 20px;
+		font-weight: 500;
+		background-color: white;
+		color: #00274C;
+	}
+
+	.navbar .proj_list.active {
 		position: fixed;
 		z-index: 1000;
 		top: 0;
@@ -620,7 +680,7 @@ a, a:visited {
 		color: #00274C;
 	}
 
-	.memory_list.active, .theme_list.active {
+	.proj_list.active, .memory_list.active, .theme_list.active {
 		display: block;
 		left: 0;
 	}

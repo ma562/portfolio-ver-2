@@ -11,6 +11,25 @@ nextButton.onclick = function(){
 prevButton.onclick = function(){
     showSlider('prev');
 }
+
+// Function to hide the arrow buttons
+function hideArrowButtons() {
+    nextButton.style.display = 'none';
+    prevButton.style.display = 'none';
+}
+
+// Function to show the arrow buttons
+function showArrowButtons() {
+    nextButton.style.display = 'block';  // Or 'inline' depending on your original CSS
+    prevButton.style.display = 'block';
+}
+
+seeMoreButtons.forEach(button => {
+    button.addEventListener('click', hideArrowButtons);
+});
+
+backButton.addEventListener('click', showArrowButtons);
+
 let unAcceppClick;
 const showSlider = (type) => {
     nextButton.style.pointerEvents = 'none';

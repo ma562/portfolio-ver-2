@@ -142,8 +142,8 @@ header nav a{
     background: #ffcb05;
 	color: black;
 	border-radius: 6px;
+	border-color: #ffcb05;
     /*border: none;*/
-    border-bottom: 1px solid #555;
     /*background-color: transparent;*/
     font-weight: bold;
     letter-spacing: 3px;
@@ -448,12 +448,12 @@ header nav a{
     left: 50%;
     transform: translateX(-50%);
     border-radius: 6px;
-    border-bottom: 1px solid #555;
     font-family: Poppins;
     font-weight: bold;
     letter-spacing: 3px;
     background: #ffcb05;
     padding: 7px 20px;
+    border-color: #ffbc05;
     /* opacity: 0; */
     /*transition: opacity 0.5s;*/
     transition: opacity 0.5s ease;

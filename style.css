@@ -102,6 +102,10 @@ header nav a{
 .carousel .list .item .introduce{
     opacity: 0;
     pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 15px;
+    color: #ffcb05;
 }
 .carousel .list .item:nth-child(2) .introduce{
     opacity: 1;
@@ -123,7 +127,7 @@ header nav a{
 }
 .carousel .list .item .introduce .des{
     font-size: small;
-    color: #5559;
+    color: white;
 }
 .carousel .list .item .introduce .seeMore{
     font-family: Poppins;
@@ -256,6 +260,14 @@ header nav a{
     opacity: 0;
     pointer-events: none;
 }
+
+.carousel.showDetail .list .item .detail {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 8px;
+    transition: opacity 0.5s ease, background-color 0.5s ease;
+}
+
 /* showDetail */
 .carousel.showDetail .list .item:nth-child(3),
 .carousel.showDetail .list .item:nth-child(4){
@@ -332,7 +344,7 @@ header nav a{
 }
 .arrows{
     position: absolute;
-    bottom: 10px;
+    bottom: 100px;
     width: 1140px;
     max-width: 90%;
     display: flex;

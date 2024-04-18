@@ -35,8 +35,12 @@ seeMoreButtons.forEach((button) => {
     button.onclick = function(){
         carousel.classList.remove('next', 'prev');
         carousel.classList.add('showDetail');
+        backButton.style.opacity = '1'; // Show the 'See All' button
+        backButton.style.pointerEvents = 'auto'; // Make it clickable
     }
 });
 backButton.onclick = function(){
     carousel.classList.remove('showDetail');
+    backButton.style.opacity = '0'; // Hide the 'See All' button
+    backButton.style.pointerEvents = 'none'; // Make it non-clickable
 }

@@ -129,19 +129,26 @@ header nav a{
     font-size: 1.25em;
     color: white;
 }
+
 .carousel .list .item .introduce .seeMore{
     font-family: Poppins;
     margin-top: 1.2em;
-    padding: 5px 0;
-    border: none;
+    /*padding: 5px 0;*/
+    padding: 7px 20px;
+    background: #ffcb05;
+	color: black;
+	border-radius: 6px;
+    /*border: none;*/
     border-bottom: 1px solid #555;
-    background-color: transparent;
+    /*background-color: transparent;*/
     font-weight: bold;
     letter-spacing: 3px;
     transition: background 0.5s;
 }
 .carousel .list .item .introduce .seeMore:hover{
-    background: #eee;
+    background: transparent;
+    color: #ffcb05;
+    cursor: pointer;
 }
 .carousel .list .item:nth-child(1){
     transform: var(--item1-transform);
@@ -344,30 +351,91 @@ header nav a{
 }
 .arrows{
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
+/*    width: auto;*/
+    /*bottom: 50px;*/
     width: 1140px;
     max-width: 90%;
     display: flex;
     justify-content: space-between;
     left: 50%;
     transform: translateX(-50%);
+/*
+    transform: translateY(-50%);  // Offset transform for exact centering*/
 }
 #prev,
 #next{
-    width: 40px;
+/*    width: 40px;
     height: 40px;
     border-radius: 50%;
     font-family: monospace;
     border: 1px solid #5555;
     font-size: large;
     bottom: 20%;
-    left: 10%;
+    left: 10%;*/
+    width: 80px; /* Wider buttons */
+    height: 50px; /* Adjust height */
+    background-color: #2C3E50; /* Dark blue background for visibility */
+    color: white; /* White arrow icons */
+    border: none; /* Remove default border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 20px; /* Icon size */
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    position: relative; /* Needed for pseudo-elements */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Soft shadow for depth */
 }
-#next{
+
+
+
+#prev:hover, #next:hover,
+#prev:focus, #next:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+#prev:hover:before, #next:hover:before,
+#prev:focus:before, #next:focus:before {
+    transform: translateY(2px);
+}
+
+#prev:active, #next:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#prev:active:before, #next:active:before {
+    transform: translateY(-1px);
+}
+
+#prev:focus, #next:focus {
+    outline: 2px solid #3498DB;
+}
+
+/*#next{
     left: unset;
     right: 10%;
 }
+*/
+/*	display: inline-block;
+	background: #ffcb05;
+	color: black;
+	font-size: 25px;
+	padding: 12px 36px;
+	margin-top: 20px;
+	border-radius: 6px;
+	border: 2px solid black;
+	border-color: #ffcb05;
+	transition: all 0.3s ease;
+}*/
+
 #back{
+	opacity: 0; /* Start hidden */
+	pointer-events: none; /* Start as non-interactive */
     position: absolute;
     z-index: 100;
     bottom: 0%;
@@ -378,19 +446,20 @@ header nav a{
     font-family: Poppins;
     font-weight: bold;
     letter-spacing: 3px;
-    background-color: transparent;
+    background: #ffcb05;
     padding: 10px;
     /* opacity: 0; */
-    transition: opacity 0.5s;
+    /*transition: opacity 0.5s;*/
+    transition: opacity 0.5s ease;
 }
 .carousel.showDetail #back{
     opacity: 1;
 }
-.carousel.showDetail #prev,
+/*.carousel.showDetail #prev,
 .carousel.showDetail #next{
     opacity: 0;
     pointer-events: none;
-}
+}*/
 .carousel::before{
     width: 500px;
     height: 300px;

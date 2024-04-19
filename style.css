@@ -530,7 +530,8 @@ header nav a{
     }
     .carousel .list .item:nth-child(2) .introduce .des,
     .carousel.showDetail .list .item:nth-child(2) .detail .des{
-        height: 100px;
+        height: 100px;	
+        /*100*/
         overflow: auto;
         /*color: white;*/
     }

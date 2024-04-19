@@ -32,8 +32,8 @@ backButton.addEventListener('click', showArrowButtons);
 
 let unAcceppClick;
 const showSlider = (type) => {
-    nextButton.style.pointerEvents = 'none';
-    prevButton.style.pointerEvents = 'none';
+    // nextButton.style.pointerEvents = 'none';
+    // prevButton.style.pointerEvents = 'none';
 
     carousel.classList.remove('next', 'prev');
     let items = document.querySelectorAll('.carousel .list .item');

@@ -118,7 +118,8 @@ header nav a{
     position: absolute;
     top: 50%;
     transform:  translateY(-50%);
-    transition: opacity 0.5s;
+    transition: opacity 0.5s;	
+    /*0.5*/
 }
 .carousel .list .item .introduce .title{
     font-size: 1.8em;

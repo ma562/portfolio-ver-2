@@ -334,27 +334,29 @@ header nav a{
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 991px) {
     .detail .project-type {
-        font-size: 0.8em; /* Smaller font size on tablets */
+        font-size: 0.4em; /* Smaller font size on tablets */
+        padding: 4px 8px;
     }
     .detail .actions {
         margin-top: 15px;
     }
     .detail .checkout {
-        font-size: 1em; /* Smaller button on tablets */
-        padding: 8px 16px;
+        font-size: 0.8em; /* Smaller button on tablets */
+        padding: 7px 14px;
     }
 }
 
 @media (max-width: 767px) {
     .detail .project-type {
-        font-size: 0.7em; /* Even smaller font size on mobile */
+        font-size: 0.2em; /* Even smaller font size on mobile */
+        padding: 2px 6px;
     }
     .detail .actions {
         margin-top: 10px;
     }
     .detail .checkout {
-        font-size: 0.9em; /* Smaller button on mobile */
-        padding: 6px 12px;
+        font-size: 0.6em; /* Smaller button on mobile */
+        padding: 4px 10px;
     }
 }
 

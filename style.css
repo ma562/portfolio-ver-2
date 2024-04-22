@@ -573,6 +573,7 @@ header nav a{
     background: #ffcb05;
     padding: 7px 20px;
     border-color: #ffbc05;
+    color: black;
     /* opacity: 0; */
     /*transition: opacity 0.5s;*/
     transition: opacity 0.5s ease;

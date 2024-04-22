@@ -63,3 +63,20 @@ backButton.onclick = function(){
     backButton.style.opacity = '0'; // Hide the 'See All' button
     backButton.style.pointerEvents = 'none'; // Make it non-clickable
 }
+
+// Variable to store the timestamp of the last touch end event
+let lastTouchTime = 0;
+
+function preventDoubleTapZoom(element) {
+    element.addEventListener('touchend', function(e) {
+        const now = Date.now();
+        if (now - lastTouchTime <= 300) { // If the current tap and the last tap are within 300 milliseconds
+            e.preventDefault();  // Prevent the default action (zoom)
+        }
+        lastTouchTime = now; // Update the lastTouchTime to the current time
+    }, false);
+}
+
+// Apply the double-tap prevention function to next and previous buttons
+preventDoubleTapZoom(nextButton);
+preventDoubleTapZoom(prevButton);

@@ -88,3 +88,44 @@ nextButton.addEventListener('touchend', handleTouchEnd, false);
 prevButton.addEventListener('touchstart', handleTouchStart, false);
 prevButton.addEventListener('touchend', handleTouchEnd, false);
 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navbar = document.querySelector('.navbar');
+
+    // Throttle function to limit the rate at which a function can fire.
+    const throttle = (func, limit) => {
+        let lastFunc;
+        let lastRan;
+        return function() {
+            const context = this;
+            const args = arguments;
+            if (!lastRan) {
+                func.apply(context, args);
+                lastRan = Date.now();
+            } else {
+                clearTimeout(lastFunc);
+                lastFunc = setTimeout(function() {
+                    if ((Date.now() - lastRan) >= limit) {
+                        func.apply(context, args);
+                        lastRan = Date.now();
+                    }
+                }, limit - (Date.now() - lastRan));
+            }
+        }
+    };
+
+    // Function to adjust navbar based on scroll position
+    const adjustNavbar = throttle(function() {
+        var scrollPosition = window.scrollY;
+        if (scrollPosition > 50) {
+            navbar.classList.add('sticky');
+        } else {
+            navbar.classList.remove('sticky');
+        }
+    }, 100); // Update '100' to increase or decrease the throttle limit as needed
+
+    // Initial check and setup scroll event listener
+    adjustNavbar();
+    window.addEventListener('scroll', adjustNavbar);
+});
+

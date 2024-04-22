@@ -268,6 +268,85 @@ header nav a{
 }
 
 /* detail  */
+
+
+.detail .project-type {
+    display: inline-block;
+    background-color: #4CAF50; /* Green background for visibility */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.detail .actions {
+    margin-top: 20px;
+    text-align: center; /* Center align the button */
+}
+
+.detail .checkout {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: #ffcb05; /* Gold color to match theme */
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+
+.detail .checkout:hover {
+    background-color: #e0b004; /* Darker shade for hover effect */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.detail .checkout:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 8px rgba(255,203,5,0.6); /* Glow effect on focus */
+}
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 991px) {
+    .detail .project-type {
+        font-size: 0.8em; /* Smaller font size on tablets */
+    }
+    .detail .actions {
+        margin-top: 15px;
+    }
+    .detail .checkout {
+        font-size: 1em; /* Smaller button on tablets */
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .detail .project-type {
+        font-size: 0.7em; /* Even smaller font size on mobile */
+    }
+    .detail .actions {
+        margin-top: 10px;
+    }
+    .detail .checkout {
+        font-size: 0.9em; /* Smaller button on mobile */
+        padding: 6px 12px;
+    }
+}
+
+/* Ensuring that text and elements scale down properly on smaller screens */
+@media (max-width: 480px) {
+    .detail {
+        padding: 10px; /* More padding for better touch target size */
+    }
+    .detail .des {
+        font-size: 0.8em; /* Smaller text on small screens */
+    }
+}
+
+
+
+
 .carousel .list .item .detail{
     opacity: 0;
     pointer-events: none;
@@ -327,7 +406,7 @@ header nav a{
 }
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button{
     font-family: Poppins;
-    background-color: transparent;
+    background-color: #ffcb05;
     border: 1px solid #5555;
     margin-left: 5px;
     padding: 5px 10px;

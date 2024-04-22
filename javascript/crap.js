@@ -64,19 +64,27 @@ backButton.onclick = function(){
     backButton.style.pointerEvents = 'none'; // Make it non-clickable
 }
 
-// Variable to store the timestamp of the last touch end event
-let lastTouchTime = 0;
+let lastTouchEnd = 0;
 
-function preventDoubleTapZoom(element) {
-    element.addEventListener('touchend', function(e) {
-        const now = Date.now();
-        if (now - lastTouchTime <= 300) { // If the current tap and the last tap are within 300 milliseconds
-            e.preventDefault();  // Prevent the default action (zoom)
-        }
-        lastTouchTime = now; // Update the lastTouchTime to the current time
-    }, false);
+function handleTouchStart(event) {
+    event.preventDefault(); // Always prevent default to stop any double-tap zoom
 }
 
-// Apply the double-tap prevention function to next and previous buttons
-preventDoubleTapZoom(nextButton);
-preventDoubleTapZoom(prevButton);
+function handleTouchEnd(event) {
+    const now = Date.now();
+    if (now - lastTouchEnd <= 300) { // Check if the touches are close in time
+        event.preventDefault();  // Prevent the default action to stop zoom
+    } else {
+        // If it's not a double-tap, let the button function proceed
+        lastTouchEnd = now; // Update last touch end time
+        // Simulate a click for functionality
+        event.target.click();
+    }
+}
+
+// Apply touch event handlers to your buttons
+nextButton.addEventListener('touchstart', handleTouchStart, false);
+nextButton.addEventListener('touchend', handleTouchEnd, false);
+prevButton.addEventListener('touchstart', handleTouchStart, false);
+prevButton.addEventListener('touchend', handleTouchEnd, false);
+

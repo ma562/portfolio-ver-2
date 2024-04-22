@@ -442,7 +442,7 @@ header nav a{
     font-weight: 500;
 }
 .carousel.carousel.showDetail .list .item:nth-child(2) .checkout button:nth-child(2){
-    background-color: #693EFF;
+    /*background-color: #693EFF;*/
     color: #eee;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail  .title,

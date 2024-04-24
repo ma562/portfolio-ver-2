@@ -124,16 +124,16 @@ header nav a{
     /*0.5*/
 }
 .carousel .list .item .introduce .title{
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: 500;
     line-height: 1em;
 }
 .carousel .list .item .introduce .topic{
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 500;
 }
 .carousel .list .item .introduce .des{
-    font-size: 1.25em;
+    font-size: 1.2em;
     color: white;
 }
 
@@ -415,7 +415,7 @@ header nav a{
     pointer-events: auto;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail .title{
-    font-size: 4em;
+    font-size: 3em;
 }
 .carousel.showDetail .list .item:nth-child(2) .detail .specifications{
     display: flex;

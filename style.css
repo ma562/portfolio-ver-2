@@ -314,10 +314,33 @@ header nav a{
 	border-color: #ffcb05;
     color: #000;
     transition: background-color 0.3s, transform 0.2s;
-
 }
 
+.detail .tryout {
+	font-family: Poppins;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 7px 20px;
+    background-color: #ffcb05; /* Gold color to match theme */
+    border-radius: 6px;
+	border-color: #ffcb05;
+    color: #000;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+
 .detail .checkout:hover {
+	cursor: pointer;
+	color: #ffcb05;
+    background-color: #e0b004; /* Darker shade for hover effect */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+
+/*    cursor: pointer;
+	color: #ffcb05;*/
+	background: transparent;
+}
+
+.detail .tryout:hover {
 	cursor: pointer;
 	color: #ffcb05;
     background-color: #e0b004; /* Darker shade for hover effect */
@@ -333,6 +356,11 @@ header nav a{
     box-shadow: 0 0 8px rgba(255,203,5,0.6); /* Glow effect on focus */
 }
 
+.detail .tryout:focus {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 8px rgba(255,203,5,0.6); /* Glow effect on focus */
+}
+
 /* Media Queries for Responsive Adjustments */
 @media (max-width: 991px) {
     .detail .project-type {
@@ -341,6 +369,10 @@ header nav a{
     }
     .detail .actions {
         margin-top: 15px;
+    }
+
+    .tryout {
+    	display: none;
     }
     .detail .checkout {
         font-size: 0.8em; /* Smaller button on tablets */
@@ -360,6 +392,9 @@ header nav a{
         font-size: 0.6em; /* Smaller button on mobile */
         padding: 4px 10px;
     }
+    .tryout {
+    	display: none;
+    }
 }
 
 /* Ensuring that text and elements scale down properly on smaller screens */
@@ -369,6 +404,9 @@ header nav a{
     }
     .detail .des {
         font-size: 0.8em; /* Smaller text on small screens */
+    }
+    .tryout {
+    	display: none;
     }
 }
 

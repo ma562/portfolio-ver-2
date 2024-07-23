@@ -46,7 +46,7 @@ particlesJS('particles-js',
           "nb_sides": 5
         },
         "image": {
-          "src": "images/binary_art_3.png",
+          "src": "images/binary_art_4.png",
           "height": 1000,
           "width": 1000
         }

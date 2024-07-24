@@ -28,7 +28,7 @@
 <body>
 	<nav class = "navbar">
 		<div class = "max-width">
-			<div class = "theme_list">
+<!-- 			<div class = "theme_list">
 				<div class = "x">
 					<i class="fa-solid fa-bars active"></i>
 				</div>
@@ -41,9 +41,8 @@
 					<li class = "security_alarm"><a href = "https://joseph-ma.com/">Security Alarm</a></li><br>
 					<li class = "weight_amplifier"><a href = "https://joseph-ma.com/">Weight Amplifier</a></li><br>
 					<li class = "cnc_hammer"><a href = "https://joseph-ma.com/">CNC Hammer</a></li><br>
-					<!-- <li class = "grade_calculator"><a href = "https://joseph-ma.com/">Grade Calculator</a></li> -->
 				</ul>
-			</div>
+			</div> -->
 			<div class = "memory_list">
 				<div class = "x2">
 					<i class="fa-solid fa-bars active"></i>
@@ -63,7 +62,7 @@
 				<li class = "original_button"><a href="#">Home</a></li>
 				<li class = "original_button"><a href="#about">About</a></li>
 				<li class = "original_button"><a href="#projects">Projects</a></li>
-				<li><a class = "themes">Themes</a>
+<!-- 				<li><a class = "themes">Themes</a>
 					<div class = "theme">
 						<ul>
 							<li class = "cat_mouse"><a href = "https://joseph-ma.com/">Cat & Mouse</a></li><br>
@@ -73,7 +72,6 @@
 							<li class = "security_alarm"><a href = "https://joseph-ma.com/">Security Alarm</a></li><br>
 							<li class = "weight_amplifier"><a href = "https://joseph-ma.com/">Weight Amplifier</a></li><br>
 							<li class = "cnc_hammer"><a href = "https://joseph-ma.com/">CNC Hammer</a></li>
-							<!-- <li class = "grade_calculator"><a href = "https://joseph-ma.com/">Grade Calculator</a></li> -->
 						</ul>
 					</div>
 					<script>
@@ -92,7 +90,7 @@
 							});
 						}
 					</script>
-				</li>
+				</li> -->
 
 				<li><a class = "mems">Memories</a>
 					<div class = "memories">
@@ -137,11 +135,11 @@
 				function handleMediaQueryChange(mediaQuery) {
 				  if (mediaQuery.matches) {
 				    // add the event listener using a named function
-				    theme_button.addEventListener('click', handleClick);
+				    //theme_button.addEventListener('click', handleClick);
 				    memory_button.addEventListener('click', handleClick2);
 				  } else {
 				    // remove the event listener using the same named function
-				    theme_button.removeEventListener('click', handleClick);
+				    //theme_button.removeEventListener('click', handleClick);
 				    memory_button.removeEventListener('click', handleClick2);
 				  }
 				}
@@ -164,9 +162,9 @@
 				handleMediaQueryChange(mediaQuery);
 
 				//X BUTTON FORMATTER
-				const x_button = document.querySelector(".x");
+				// const x_button = document.querySelector(".x");
 				const x2_button = document.querySelector(".x2");
-				x_button.addEventListener('click', closeTheme);
+				//x_button.addEventListener('click', closeTheme);
 				x2_button.addEventListener('click', closeMemory);
 
 				const theme_element2 = document.querySelector(".theme_list");
@@ -185,10 +183,10 @@
 				const element1 = document.querySelector('.menu-btn');
 				const rect = element1.getBoundingClientRect();
 
-				const element2 = document.querySelector('.x');
+				// const element2 = document.querySelector('.x');
 				const element3 = document.querySelector('.x2');
-				element2.style.left = `${rect.left}px`;
-				element2.style.top = `${rect.top}px`;
+				// element2.style.left = `${rect.left}px`;
+				// element2.style.top = `${rect.top}px`;
 				element3.style.left = `${rect.left}px`;
 				element3.style.top = `${rect.top}px`;
 
@@ -196,10 +194,10 @@
 				  const element1 = document.querySelector('.menu-btn');
 				  const rect = element1.getBoundingClientRect();
 
-				  const element2 = document.querySelector('.x');
+				  // const element2 = document.querySelector('.x');
 				  const element3 = document.querySelector('.x2');
-				  element2.style.left = `${rect.left}px`;
-				  element2.style.top = `${rect.top}px`;
+				  // element2.style.left = `${rect.left}px`;
+				  // element2.style.top = `${rect.top}px`;
 				  element3.style.left = `${rect.left}px`;
 				  element3.style.top = `${rect.top}px`;
 				});
@@ -337,6 +335,28 @@
 			<!-- <div class = "text">PROJECTS</div><br> -->
 			<div class="carousel">
         <div class="list">
+        	<div class="item">
+                <img src="images/gyro.png">
+                <div class="introduce">
+                    <div class="title">ROBOTICS</div>
+                    <div class="topic">Gyroscope Controlled Arm</div>
+                    <div class="des">
+                        Built a robotic arm out of popsicle sticks/MG966R servo motors and used Arduino software to calibrate them to GY-521 gyroscope accelerometers which allowed for the robotic arm to mimic the movements of a human arm.
+                    </div>
+                    <button class="seeMore">VIEW PROJECT</button>
+                </div>
+                <div class="detail">
+                	<div class="project-type">INDIVIDUAL PROJECT</div>
+                    <div class="title">Gyroscope Controlled Arm</div>
+                    <div class="des">
+                        This project involves constructing a robotic arm from popsicle sticks, controlled by an Arduino Mega 2560 and programmed using the Arduino Software (IDE). The arm's movements are finely tuned through a GY-521 MPU6050 module, which integrates an accelerometer and gyroscope to accurately map the servo motors' positions. A Hall Effect Sensor is also employed to enable the gripper to respond to magnetic fields, enhancing the arm’s interactive capabilities.
+                    </div>
+                    
+                    <div class="actions">
+                        <button class = "checkout"> <a href = "https://ma562.github.io/joseph_ma_gyro_controlled_arm/" target = "_blank">VIEW BLOG POST</a></button>
+                    </div>
+                </div>
+            </div>
             <div class="item">
                 <img src="images/catmouse.png">
                 <div class="introduce">
@@ -621,29 +641,6 @@
                     <div class="actions">
                         <button class = "checkout"> <a href = "https://ma562.github.io/joseph_ma_mutlivariate_grade_calculator/" target = "_blank">VIEW BLOG POST</a></button>
                         <button class = "tryout"> <a href = "https://ma562.github.io/grade_calculator/" target = "_blank">TRY IT OUT</a></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="images/gyro.png">
-                <div class="introduce">
-                    <div class="title">ROBOTICS</div>
-                    <div class="topic">Gyroscope Controlled Arm</div>
-                    <div class="des">
-                        Built a robotic arm out of popsicle sticks/MG966R servo motors and used Arduino software to calibrate them to GY-521 gyroscope accelerometers which allowed for the robotic arm to mimic the movements of a human arm.
-                    </div>
-                    <button class="seeMore">VIEW PROJECT</button>
-                </div>
-                <div class="detail">
-                	<div class="project-type">INDIVIDUAL PROJECT</div>
-                    <div class="title">Gyroscope Controlled Arm</div>
-                    <div class="des">
-                        This project involves constructing a robotic arm from popsicle sticks, controlled by an Arduino Mega 2560 and programmed using the Arduino Software (IDE). The arm's movements are finely tuned through a GY-521 MPU6050 module, which integrates an accelerometer and gyroscope to accurately map the servo motors' positions. A Hall Effect Sensor is also employed to enable the gripper to respond to magnetic fields, enhancing the arm’s interactive capabilities.
-                    </div>
-                    
-                    <div class="actions">
-                        <button class = "checkout"> <a href = "https://ma562.github.io/joseph_ma_gyro_controlled_arm/" target = "_blank">VIEW BLOG POST</a></button>
                     </div>
                 </div>
             </div>

@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 	//typing script
 	var typed = new Typed(".typing", {
-		strings: ["a Computer Engineer", "an Electrical Engineer", "a Programmer", "a Robotics Enthusiast", "a Pythonista", "a Digital Artist", "a Boilermaker"],
+		strings: ["a Computer Engineer", "an Electrical Engineer", "a Programmer", "a Robotics Enthusiast", "a Boilermaker"],
 		typeSpeed: 100,
 		backSpeed: 60,
 		loop: true
@@ -59,3 +59,33 @@ $(document).ready(function(){
 		}
 	});
 });
+
+// JavaScript to trigger animation on scroll only once
+document.addEventListener("DOMContentLoaded", function() {
+    const timeline = document.querySelector(".timeline");
+    const containers = document.querySelectorAll(".container");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                // Apply the animation to the timeline line
+                timeline.classList.add('animate-line');
+
+                // Apply the animation to each container
+                containers.forEach((container, index) => {
+                    container.style.animation = `movedown 1s ease forwards ${index * 0.5}s`; // adds a delay between containers
+                });
+
+                observer.unobserve(entry.target); // Stop observing after applying the animations
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the timeline is visible
+    });
+
+    observer.observe(timeline);
+});
+
+
+

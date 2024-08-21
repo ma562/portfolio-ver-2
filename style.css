@@ -1325,3 +1325,213 @@ a, a:visited {
 		font-size: 27px;
 	}
 }
+
+/*New time line*/
+/* Timeline Container */
+/* Container Styling */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    /*animation: movedown 1s ease forwards;*/
+}
+
+.left-container {
+    flex-direction: row-reverse;
+}
+
+.right-container {
+    flex-direction: row;
+}
+
+.text-box, .image-container {
+    flex-basis: 45%; /* Equal width for text and image */
+    margin: 0 20px; /* Increase margin to move elements further from the line */
+}
+
+.text-box {
+    padding: 25px 35px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.text-box:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.text-box h2 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #00274c;
+}
+
+.text-box h3 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.text-box small {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #888;
+}
+
+/* Image Container Styling */
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    /*box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);*/
+}
+
+/* Timeline Line Styling */
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 0;
+    background: #00274c;
+    top: 60px;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 1;
+    /*animation: moveline 2s linear forwards;*/
+}
+
+/* Triggered Animation for Timeline Line */
+.timeline.animate-line::after {
+    animation: moveline 2s linear forwards;
+}
+
+/* The containers will be animated individually via inline styles applied by JavaScript */
+
+
+@keyframes moveline {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.left-container-arrow,
+.right-container-arrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 35px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+
+.left-container-arrow {
+    border-left: 18px solid #fff;
+    right: calc(-15px - 3px); /* Adjusted to touch the line */
+}
+
+.right-container-arrow {
+    border-right: 18px solid #fff;
+    left: calc(-15px - 3px); /* Adjusted to touch the line */
+}
+
+/* Animation for containers */
+@keyframes movedown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Delays for individual containers */
+.container:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.container:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.container:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.container:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.timeline .title {
+    font-family: 'Ubuntu', 'sans-serif;';
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color: #00274c;
+    margin-top: -100px;
+    margin-bottom: 20px; /* Increase the margin-bottom to push the line down */
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start; /* Align items to avoid overlap */
+        padding: 10px;
+    }
+    .text-box {
+        width: calc(100% - 50px); /* Reduce width to avoid overlap with line */
+        margin-left: 50px; /* Move text box away from the line */
+        margin-bottom: 20px;
+    }
+    .image-container {
+        width: calc(100% - 50px); /* Reduce width to avoid overlap with line */
+        margin-left: 50px; /* Move image container away from the line */
+        margin-bottom: 20px;
+    }
+    .timeline::after {
+        top: 80px;
+        left: 30px; /* Adjust line position */
+    }
+    .left-container-arrow,
+    .right-container-arrow {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px; /* Adjust arrow position */
+    }
+
+    .timeline .title {
+        margin-bottom: 40px; /* Increase the margin-bottom to push the line down */
+    }
+}
+
+/* Section Background */
+.mytimeline {
+    background: #e3e3e3;
+    font-family: 'Poppins', sans-serif;
+    min-height: 500px;
+    color: #00274c;
+    padding-bottom: 50px;
+} 
+
